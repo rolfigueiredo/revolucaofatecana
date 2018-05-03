@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="WideImage_Operation_AddNoise.html" server="107.180.46.189" local="131048029443277371" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_ApplyConvolution.html" server="107.180.46.189" local="131048029443811337" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_ApplyMask.html" server="107.180.46.189" local="131048029444899733" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_AsGrayscale.html" server="107.180.46.189" local="131048029445368495" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_ApplyFilter.html" server="107.180.46.189" local="131048029444412795" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_AsNegative.html" server="107.180.46.189" local="131048029445967584" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_AutoCrop.html" server="107.180.46.189" local="131048029446436347" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_CopyChannelsPalette.html" server="107.180.46.189" local="131048029446970366" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_CopyChannelsTrueColor.html" server="107.180.46.189" local="131048029447595398" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_CorrectGamma.html" server="107.180.46.189" local="131048029448441929" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_Crop.html" server="107.180.46.189" local="131048029448975930" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_Flip.html" server="107.180.46.189" local="131048029449444734" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_GetMask.html" server="107.180.46.189" local="131048029449978762" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_InvalidFitMethodException.html" server="107.180.46.189" local="131048029450447520" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_Merge.html" server="107.180.46.189" local="131048029451606554" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_Mirror.html" server="107.180.46.189" local="131048029452140573" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_InvalidResizeDimensionException.html" server="107.180.46.189" local="131048029450981517" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_ResizeCanvas.html" server="107.180.46.189" local="131048029452987082" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_Rotate.html" server="107.180.46.189" local="131048029453612105" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_Resize.html" server="107.180.46.189" local="131048029452609345" remote="131076228000000000" Dst="1" />
+<file name="_Operation---AddNoise.php.html" server="107.180.46.189" local="131048029455461449" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_RoundCorners.html" server="107.180.46.189" local="131048029453989851" remote="131076228000000000" Dst="1" />
+<file name="WideImage_Operation_Unsharp.html" server="107.180.46.189" local="131048029454614892" remote="131076228000000000" Dst="1" />
+<file name="_Operation---ApplyMask.php.html" server="107.180.46.189" local="131048029456998255" remote="131076228000000000" Dst="1" />
+<file name="_Operation---ApplyConvolution.php.html" server="107.180.46.189" local="131048029455995451" remote="131076228000000000" Dst="1" />
+<file name="_Operation---ApplyFilter.php.html" server="107.180.46.189" local="131048029456620478" remote="131076228000000000" Dst="1" />
+<file name="_Operation---AsNegative.php.html" server="107.180.46.189" local="131048029457844692" remote="131076228000000000" Dst="1" />
+<file name="_Operation---AutoCrop.php.html" server="107.180.46.189" local="131048029458313554" remote="131076228000000000" Dst="1" />
+<file name="_Operation---AsGrayscale.php.html" server="107.180.46.189" local="131048029457467023" remote="131076228000000000" Dst="1" />
+<file name="_Operation---CopyChannelsPalette.php.html" server="107.180.46.189" local="131048029458847475" remote="131076228000000000" Dst="1" />
+<file name="_Operation---CopyChannelsTrueColor.php.html" server="107.180.46.189" local="131048029459316340" remote="131076228000000000" Dst="1" />
+<file name="_Operation---CorrectGamma.php.html" server="107.180.46.189" local="131048029459850239" remote="131076228000000000" Dst="1" />
+<file name="_Operation---Crop.php.html" server="107.180.46.189" local="131048029460319091" remote="131076228000000000" Dst="1" />
+<file name="_Operation---Flip.php.html" server="107.180.46.189" local="131048029461009340" remote="131076228000000000" Dst="1" />
+<file name="_Operation---GetMask.php.html" server="107.180.46.189" local="131048029461478125" remote="131076228000000000" Dst="1" />
+<file name="_Operation---Mirror.php.html" server="107.180.46.189" local="131048029462480952" remote="131076228000000000" Dst="1" />
+<file name="_Operation---Resize.php.html" server="107.180.46.189" local="131048029463327442" remote="131076228000000000" Dst="1" />
+<file name="_Operation---Merge.php.html" server="107.180.46.189" local="131048029462012166" remote="131076228000000000" Dst="1" />
+<file name="_Operation---ResizeCanvas.php.html" server="107.180.46.189" local="131048029463861359" remote="131076228000000000" Dst="1" />
+<file name="_Operation---Rotate.php.html" server="107.180.46.189" local="131048029464173960" remote="131076228000000000" Dst="1" />
+<file name="_Operation---RoundCorners.php.html" server="107.180.46.189" local="131048029464642745" remote="131076228000000000" Dst="1" />
+<file name="_Operation---Unsharp.php.html" server="107.180.46.189" local="131048029465332993" remote="131076228000000000" Dst="1" />
+</dwsync>
