@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="ApplyConvolutionTest.php" server="107.180.46.189" local="131048029527798267" remote="131076228600000000" Dst="1" />
+<file name="ApplyFilterTest.php" server="107.180.46.189" local="131048029528267048" remote="131076228600000000" Dst="1" />
+<file name="ApplyMaskTest.php" server="107.180.46.189" local="131048029528801071" remote="131076228600000000" Dst="1" />
+<file name="AutoCrop.test.php" server="107.180.46.189" local="131048029530272621" remote="131076228600000000" Dst="1" />
+<file name="AsGrayscaleTest.php" server="107.180.46.189" local="131048029529269834" remote="131076228600000000" Dst="1" />
+<file name="AsNegativeTest.php" server="107.180.46.189" local="131048029529803854" remote="131076228600000000" Dst="1" />
+<file name="CorrectGammaTest.php" server="107.180.46.189" local="131048029530806618" remote="131076228600000000" Dst="1" />
+<file name="CropTest.php" server="107.180.46.189" local="131048029531275385" remote="131076228600000000" Dst="1" />
+<file name="FlipTest.php" server="107.180.46.189" local="131048029531809405" remote="131076228600000000" Dst="1" />
+<file name="GetChannelsTest.php" server="107.180.46.189" local="131048029532459559" remote="131076228600000000" Dst="1" />
+<file name="GetMaskTest.php" server="107.180.46.189" local="131048029532812205" remote="131076228600000000" Dst="1" />
+<file name="MergeTest.php" server="107.180.46.189" local="131048029533280981" remote="131076228600000000" Dst="1" />
+<file name="MirrorTest.php" server="107.180.46.189" local="131048029533971252" remote="131076228600000000" Dst="1" />
+<file name="ResizeCanvasTest.php" server="107.180.46.189" local="131048029534505168" remote="131076228600000000" Dst="1" />
+<file name="ResizeTest.php" server="107.180.46.189" local="131048029534974047" remote="131076228600000000" Dst="1" />
+<file name="UnsharpTest.php" server="107.180.46.189" local="131048029536667091" remote="131076228600000000" Dst="1" />
+<file name="RotateTest.php" server="107.180.46.189" local="131048029535664318" remote="131076228600000000" Dst="1" />
+<file name="RoundCornersTest.php" server="107.180.46.189" local="131048029536133094" remote="131076228600000000" Dst="1" />
+</dwsync>
