@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="addNoise.php" server="107.180.46.189" local="131048029400628859" remote="131076227400000000" Dst="1" />
+<file name="applyMask.php" server="107.180.46.189" local="131048029401732006" remote="131076227400000000" Dst="1" />
+<file name="applyFilter.php" server="107.180.46.189" local="131048029401376773" remote="131076227400000000" Dst="1" />
+<file name="applyConvolution.php" server="107.180.46.189" local="131048029400961495" remote="131076227400000000" Dst="1" />
+<file name="asGrayscale.php" server="107.180.46.189" local="131048029401932135" remote="131076227400000000" Dst="1" />
+<file name="autoCrop.php" server="107.180.46.189" local="131048029402437480" remote="131076227400000000" Dst="1" />
+<file name="asNegative.php" server="107.180.46.189" local="131048029402227333" remote="131076227400000000" Dst="1" />
+<file name="correctGamma.php" server="107.180.46.189" local="131048029402637605" remote="131076227400000000" Dst="1" />
+<file name="crop.php" server="107.180.46.189" local="131048029402832740" remote="131076227400000000" Dst="1" />
+<file name="flip.php" server="107.180.46.189" local="131048029403042891" remote="131076227400000000" Dst="1" />
+<file name="getCanvas.php" server="107.180.46.189" local="131048029403273029" remote="131076227400000000" Dst="1" />
+<file name="getChannels.php" server="107.180.46.189" local="131048029403528205" remote="131076227400000000" Dst="1" />
+<file name="getMask.php" server="107.180.46.189" local="131048029403723332" remote="131076227400000000" Dst="1" />
+<file name="merge.php" server="107.180.46.189" local="131048029403953501" remote="131076227400000000" Dst="1" />
+<file name="mirror.php" server="107.180.46.189" local="131048029404238676" remote="131076228000000000" Dst="1" />
+<file name="resize.php" server="107.180.46.189" local="131048029404468828" remote="131076228000000000" Dst="1" />
+<file name="resizeCanvas.php" server="107.180.46.189" local="131048029404723994" remote="131076228000000000" Dst="1" />
+<file name="roundCorners.php" server="107.180.46.189" local="131048029405174301" remote="131076228000000000" Dst="1" />
+<file name="rotate.php" server="107.180.46.189" local="131048029404959152" remote="131076228000000000" Dst="1" />
+<file name="unsharp.php" server="107.180.46.189" local="131048029405414457" remote="131076228000000000" Dst="1" />
+</dwsync>
