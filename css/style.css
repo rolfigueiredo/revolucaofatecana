@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.container-geral {
+    width: 350px;
+    margin: auto;
+    height: auto;
+}
+.container{
+	padding:20px;
+	border-radius:8px;
+    text-align: center;
+}
+#login_quadro {
+    background-color: #fff;
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -175px;
+    z-index: 2;
+}
+#login_barra {
+    background: url("../images/faixa_login.jpg") center repeat-x;
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    margin-top: -125px;
+    z-index: 1;
+    text-align: center;
+}
+a {
+    color: #333;
+    text-decoration: underline;
+}
+.container-erro-tit {
+    padding-bottom: 5px 0;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #cc0000;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #cc0000;
+}
+.container-erro {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+.logo {
+    margin: 100px 0 50px 0;
+    text-align:center;
+}
+.logo > img {
+    width: 240px;
+}
+.logo1 {
+    margin-bottom: 20px;
+    text-align:center;
+}
+.logo1 > img {
+    width: 300px;
+}
+.container>h3{
+	margin:0;
+	padding:0;
+	font-weight:400;
+	color:#cc0000;
+}
+.container label{
+	color:#000;
+}
+.container input[type=text], .container input[type=password]{
+	border-radius:6px;
+	width:245px;
+	height:15px;
+	padding:4px;
+	color:#999
+}
+.container input[type=submit]{
+	border:solid 0;
+	border-radius:6px;
+	width:120px;
+	padding:5px 0;
+    background-color: #cc0000;
+    color: #fff;
+}
+.container input[type=submit]:hover{
+	background-color:#ccc;
+    color: #333;
+}
+.login{
+	border:solid 1px #980021;
+}
+.welcome-tit {
+    border-bottom: solid 1px #cc0000;
+    text-align: center;
+    padding: 20px 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.welcome {
+    padding: 10px;
+    text-align: center;
+}
+.welcome > h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #333;
+}
+.welcome .bt_deslogar {
+    margin-top: 20px;
+}
+.welcome .bt_deslogar > a {
+    color: #FFF;
+    text-decoration: none;
+    border: solid 0;
+    border-radius: 4px;
+    background: #cc0000;
+    margin-top: 120px;
+    padding: 5px 20px;
+}
