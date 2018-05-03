@@ -1,6 +1,7 @@
 <?php
 require_once(dirname(__FILE__).'/class/Login.php');
 require_once(dirname(__FILE__).'/class/Produto.php');
+require_once(dirname(__FILE__).'/class/Paginacao.php');
 $objLogin = new Login();
 
 $objLogin->verificarLogado();
@@ -13,8 +14,15 @@ if (isset($_GET['pesquisa'])){
 }
 
 if(isset($_GET["id"])){
+    $objProduto->getDados($_GET["id"]);
 	$exc = $objProduto->ExcProduto($_GET["id"]);
-    if ($exc=="Sucesso"){
+    $exc=16;
+    if ($exc>0){
+        require_once(dirname(__FILE__).'/class/Upload.php');
+        $nome_img=$objProduto->getImgProduto();
+        $pasta="arquivos/";
+        $upload = new Upload("", "", "", $nome_img, $pasta);
+        $upload->deletar();
         header("Location:produtos.php?pesq=$pesq&exc=ok");
     }
 }
@@ -104,40 +112,56 @@ include "inc/cabecalho.php"; ?>
                     <div class="row">
                         <div class="chart col-lg-12 col-12">
                             <div class="bg-white align-items-center justify-content-center has-shadow format-box-forms">
-                                <? $produtos =$objProduto->ListarProdutos('produtos.php',$pesq);
-                                if (!$produtos){
-                                    echo "FAÇA A BUSCA NOS CAMPOS ACIMA.";
-                                }else{?>
-                                    <table class="table table-striped table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Produto</th>
-                                                <th id="lista_grd">Descrição</th>
-                                                <th id="lista_grd">Categoria</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?foreach ($produtos as $row) { ?>
-                                            <tr>
-                                                <th scope="row"><?=$row[0]?></th>
-                                                <td><?=$row[1]?></td>
-                                                <td id="lista_grd"><?=$row[2]?></td>
-                                                <td id="lista_grd"><?=$row[3]?></td>
-                                                <td class="text-right lista_botoes" style="color:#cc0000">
-                                                    <a href="produto_alt.php?id=<?=$row[0] ?>&pesq=<?=$pesq ?>">
-                                                        <i class="fa fa-2x fa-check bt-alterar"></i>
-                                                    </a>
-                                                    <a href="#" onclick="validar_excluir('Tem certeza que deseja excluir este produto?','produtos.php?id=<?=$row[0] ?>&pesq=<?=$pesq ?>')" aria-expanded="false" data-toggle="collapse">
-                                                        <i class="fa fa-2x fa-close bt-excluir"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <? } ?>
-                                        </tbody>
-                                    </table>
-                                <? } ?>
+                                <? $qtd_produtos =$objProduto->QtdProdutos($pesq);
+                                $objPaginacao = new Paginacao($qtd_produtos);
+                                if (isset($_GET['ini']))
+                                    $objPaginacao->SetIni($_GET['ini']);
+                                if (isset($_GET['itens']))
+                                    $objPaginacao->SetItens($_GET['itens']);
+
+                                if ($objPaginacao->ValidarPaginacao()){
+                                    $produtos =$objProduto->ListarProdutos($pesq,$objPaginacao->GetIni(), $objPaginacao->GetItens());
+                                    if (!$produtos){
+                                        echo "FAÇA A BUSCA NOS CAMPOS ACIMA.";
+                                    }else{
+                                        if ($qtd_produtos==1)
+                                            echo "Foi encontrado 1 produto";
+                                        else
+                                            echo "Foram encontrados $qtd_produtos produtos";
+                                        echo "<br>".$objPaginacao->ItensPaginar();?>
+                                        <table class="table table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Produto</th>
+                                                    <th id="lista_grd">Descrição</th>
+                                                    <th id="lista_grd">Categoria</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?foreach ($produtos as $row) { ?>
+                                                <tr>
+                                                    <th scope="row"><?=$row[0]?></th>
+                                                    <td><?=$row[1]?></td>
+                                                    <td id="lista_grd"><?=$row[2]?></td>
+                                                    <td id="lista_grd"><?=$row[3]?></td>
+                                                    <td class="text-right lista_botoes" style="color:#cc0000">
+                                                        <a href="produto_alt.php?id=<?=$row[0] ?>&pesq=<?=$pesq ?>">
+                                                            <i class="fa fa-2x fa-check bt-alterar"></i>
+                                                        </a>
+                                                        <a href="#" onclick="validar_excluir('Tem certeza que deseja excluir este produto?','produtos.php?id=<?=$row[0] ?>&pesq=<?=$pesq ?>')" aria-expanded="false" data-toggle="collapse">
+                                                            <i class="fa fa-2x fa-close bt-excluir"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <? } ?>
+                                            </tbody>
+                                        </table>
+                                        <? echo $objPaginacao->Paginar();
+                                    }
+                                }else
+                                    echo "PÁGINA INVÁLIDA"; ?>
                             </div>
                         </div>
                     </div>

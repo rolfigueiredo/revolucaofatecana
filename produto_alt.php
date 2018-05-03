@@ -19,7 +19,6 @@ if(isset($_POST["add"]) && $_POST["add"] == "Alterar"){
 	$cad = $objProduto->AltProduto($_POST["id"],$_POST["categ"],$_POST['produto'],$_POST['valor'],$_POST['descricao']);
     if ($cad>0){
         if (!empty($_FILES['img'])){
-            echo "2#";
             require_once(dirname(__FILE__).'/class/Upload.php');
             $nome_img="foto_".$cad;
             $pasta="arquivos/";
@@ -76,7 +75,7 @@ include "inc/cabecalho.php"; ?>
                     <div class="row">
                         <div class="chart col-lg-12 col-12">
                             <div class="bg-white align-items-center justify-content-center has-shadow format-box-forms">
-                                <form method="post" action="" enctype="multipart/form-data">
+                                <form id="form-produto" method="post" action="" enctype="multipart/form-data">
                                     <input type="hidden" name="id" value="<?=$id?>" />
                                     <input type="hidden" name="pesq" value="<?=$pesq?>" />
                                     <div class="row">

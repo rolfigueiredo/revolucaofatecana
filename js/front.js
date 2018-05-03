@@ -1,104 +1,109 @@
-/*global $, document, Chart, LINECHART, data, options, window*/
+
 $(document).ready(function () {
+    $('.data').mask('00/00/0000');
+    $('.fone').mask('0000-0000');
+    $('.cel').mask('00000-0000');
+    $('.cep').mask('00000-000');
+    $('.codigo').mask('000');
 
-    'use strict';
 
     // ------------------------------------------------------- //
-    // For demo purposes only
+    // form usuario
     // ------------------------------------------------------ //
-
-    if ($.cookie("theme_csspath")) {
-        $('link#theme-stylesheet').attr("href", $.cookie("theme_csspath"));
-    }
-
-    $("#colour").change(function () {
-
-        if ($(this).val() !== '') {
-
-            var theme_csspath = 'css/style.' + $(this).val() + '.css';
-
-            $('link#theme-stylesheet').attr("href", theme_csspath);
-
-            $.cookie("theme_csspath", theme_csspath, { expires: 365, path: document.URL.substr(0, document.URL.lastIndexOf('/')) });
+    $('#form-usuario').ready(function () {
+        var tipo = $('#tipo');
+        var tipo_aluno_ra = $('#tipo_aluno_ra');
+        var tipo_aluno_curso = $('#tipo_aluno_curso');
+        var ra = $('#ra')
+        var curso = $('#curso');
+        if (tipo.val() != 1){
+            tipo_aluno_ra.hide();
+            tipo_aluno_curso.hide();
         }
-
-        return false;
-    });
-
-    // ------------------------------------------------------- //
-    // Search Box
-    // ------------------------------------------------------ //
-    $('#search').on('click', function (e) {
-        e.preventDefault();
-        $('.search-box').fadeIn();
-    });
-    $('.dismiss').on('click', function () {
-        $('.search-box').fadeOut();
-    });
-
-    // ------------------------------------------------------- //
-    // Card Close
-    // ------------------------------------------------------ //
-    $('.card-close a.remove').on('click', function (e) {
-        e.preventDefault();
-        $(this).parents('.card').fadeOut();
-    });
-
-
-    // ------------------------------------------------------- //
-    // Adding fade effect to dropdowns
-    // ------------------------------------------------------ //
-    $('.dropdown').on('show.bs.dropdown', function () {
-        $(this).find('.dropdown-menu').first().stop(true, true).fadeIn();
-    });
-    $('.dropdown').on('hide.bs.dropdown', function () {
-        $(this).find('.dropdown-menu').first().stop(true, true).fadeOut();
-    });
-
-
-    // ------------------------------------------------------- //
-    // Login  form validation
-    // ------------------------------------------------------ //
-    $('#login-form').validate({
-        messages: {
-            loginUsername: 'Por favor, digite seu login',
-            loginPassword: 'Por favor, digite sua senha'
-        }
-    });
-
-    // ------------------------------------------------------- //
-    // Register form validation
-    // ------------------------------------------------------ //
-    $('#register-form').validate({
-        messages: {
-            registerUsername: 'please enter your first name',
-            registerEmail: 'please enter a vaild Email Address',
-            registerPassword: 'please enter your password'
-        }
-    });
-
-    // ------------------------------------------------------- //
-    // Sidebar Functionality
-    // ------------------------------------------------------ //
-    $('#toggle-btn').on('click', function (e) {
-        e.preventDefault();
-        $(this).toggleClass('active');
-
-        $('.side-navbar').toggleClass('shrinked');
-        $('.content-inner').toggleClass('active');
-
-        if ($(window).outerWidth() > 1183) {
-            if ($('#toggle-btn').hasClass('active')) {
-                $('.navbar-header .brand-small').hide();
-                $('.navbar-header .brand-big').show();
+        tipo.change(function () {
+            if (tipo.val() == 1) {
+                tipo_aluno_ra.show();
+                tipo_aluno_curso.show();
+                ra.attr("required", true);
+                curso.attr("required", true);
             } else {
-                $('.navbar-header .brand-small').show();
-                $('.navbar-header .brand-big').hide();
+                tipo_aluno_ra.hide();
+                tipo_aluno_curso.hide();
+                ra.attr("required", false);
+                curso.attr("required", false);
+            }
+        });
+    });
+
+    // ------------------------------------------------------- //
+    // Usuario validar
+    // ------------------------------------------------------ //
+    $('#form-usuario').validate({
+        messages: {
+            tipo: {
+                required: "Por favor, escolha o TIPO DE CADASTRO"
+            },
+            ra: {
+                required: "Por favor, digite seu RA"
+                number: "Por favor, o RA só aceita números"
+            },
+            curso: {
+                required: "Por favor, escolha o CURSO"
+            },
+            nome: {
+                required: "Por favor, digite seu NOME"
+            },
+            email: {
+                required: "Por favor, digite seu E-MAIL"
+            },
+            senha: {
+                required: "Por favor, digite sua SENHA",
+                minlength: "A SENHA deve ter pelo menos 5 caracteres"
+            },
+            senha_conf: {
+                required: "Por favor, confirma sua SENHA",
+                minlength: "A SENHA deve ter pelo menos 5 caracteres",
+                equalTo: "A SENHA não confere"
+            },
+            senha1_conf: {
+                equalTo: "A SENHA não confere"
+            }
+        },
+        rules: {
+            ra:
+                number: true
+            senha: {
+                required: true,
+                minlength: 5
+            },
+            senha_conf: {
+                required: true,
+                minlength: 5,
+                equalTo: "#senha"
+            },
+            senha1_conf: {
+                equalTo: "#senha1"
             }
         }
-
-        if ($(window).outerWidth() < 1183) {
-            $('.navbar-header .brand-small').show();
+    });
+    
+    // ------------------------------------------------------- //
+    // Produto validar
+    // ------------------------------------------------------ //
+    $('#form-produto').validate({
+        messages: {
+            categ: {
+                required: "Por favor, escolha uma CATEGORIA"
+            },
+            produto: {
+                required: "Por favor, digite o NOME DO PRODUTO"
+            },
+            valor: {
+                required: "Por favor, digite o VALOR DO PRODUTO"
+            },
+            descricao: {
+                required: "Por favor, digite a DESCRIÇÃO DO PRODUTO"
+            }
         }
     });
 
@@ -124,16 +129,6 @@ $(document).ready(function () {
         }
     });
 
-    // ------------------------------------------------------- //
-    // External links to new window
-    // ------------------------------------------------------ //
-    $('.external').on('click', function (e) {
-
-        e.preventDefault();
-        window.open($(this).attr("href"));
-    });
-
-    
     // ------------------------------------------------------- //
     // Upload
     // ------------------------------------------------------ //
@@ -170,30 +165,27 @@ $(document).ready(function () {
     $("#imgInp").change(function () {
         readURL(this);
     });
-
 });
 
+function validar_alterar(formulario) {
+    document.getElementById(formulario).submit()
+}
 function validar_excluir(msg, url) {
     if (confirm(msg))
         location.href = url
 }
-
-function validar_senha(form) {
-    if (form.senha.value != "" || form.conf_senha.value != "") {
-        if (form.senha.value != form.conf_senha.value) {
-            alert("A senha não confere com a confirmação.")
-            form.senha.focus()
-            return false
-        }
-    }
+function validar_limpar(msg, formulario) {
+    if (confirm(msg))
+        document.getElementById(formulario).submit()
 }
-
-function validar_senha_sms(form) {
-    if (form.senha_sms.value != "" || form.conf_senha_sms.value != "") {
-        if (form.senha_sms.value != form.conf_senha_sms.value) {
-            alert("A senha não confere com a confirmação.")
-            form.senha_sms.focus()
-            return false
-        }
-    }
+function calc_valor(op, valor) {
+    total = document.getElementById('total').value;
+    total = parseFloat(total.replace(',', '.'));
+    if (op)
+        total += parseFloat(valor);
+    else
+        total -= parseFloat(valor);
+    total = total.toFixed(2);
+    total = total.replace('.', ',');
+    document.getElementById('total').value = total;
 }
