@@ -1,0 +1,16 @@
+#imagem{
+	border-style: ridge;
+}
+
+.postagem{
+	height: 180px;
+	border-style: ridge;
+}
+#textpost{
+	font-size: 14px;
+	font: arial;
+	border-top: 50px;
+}
+.content{
+	background-color: rgb(33, 16, 1);
+}
