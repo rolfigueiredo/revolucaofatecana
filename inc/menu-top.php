@@ -4,7 +4,7 @@
 			<div class="navbar-holder d-flex align-items-center justify-content-between">
 				<div class="navbar-header">
 				<a href="index.html" class="navbar-brand">
-					<div class="brand-text brand-big hidden-lg-down"><span>SCAF </span><strong>Sistema de Controle Administrativo/Financeiro</strong></div>
+					<div class="brand-text brand-big hidden-lg-down"><span>SCAF </span><strong> Sistema de Controle Administrativo/Financeiro</strong></div>
 					<div class="brand-text brand-small"><strong>SCAF</strong></div></a>
 				<a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
 				</div>

@@ -31,6 +31,13 @@
                 <? if ($list==1){ ?><li><a href="produtos.php">Manutenção</a></li><? } ?>
             </ul>
         </li>
+        <li<?php if ($menu=="Eventos"){?> class="active"<?php }?>>
+            <a href="#menu-eventos" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-2x fa-user"></i>Eventos</a>
+            <ul id="menu-eventos" class="collapse list-unstyled">
+                <? if ($cad==1){ ?><li><a href="evento_cad.php">Incluir</a></li><? } ?>
+                <? if ($list==1){ ?><li><a href="eventos.php">Manutenção</a></li><? } ?>
+            </ul>
+        </li>
         <li<?php if ($menu=="config"){?> class="active"<?php }?>>
             <a href="#menu-config" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-2x fa-wrench"></i>Ajustes</a>
             <ul id="menu-config" class="collapse list-unstyled">
